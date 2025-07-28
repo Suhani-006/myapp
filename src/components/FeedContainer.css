@@ -1,0 +1,31 @@
+.FeedContainer {
+  flex: 1;
+  margin-left: 260px; /* Sidebar width */
+  min-height: 100vh;
+  background: var(--background);
+  transition: margin-left 0.3s, background 0.3s;
+  overflow-y: auto;
+}
+
+.FeedContainer-content {
+  padding: 0rem;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+  .FeedContainer {
+    margin-left: 72px; /* Collapsed sidebar width */
+  }
+}
+
+@media (max-width: 767px) {
+  .FeedContainer {
+    margin-left: 0; /* No sidebar on mobile */
+    padding-bottom: 60px; /* Space for BottomNav */
+  }
+  
+  .FeedContainer-content {
+    padding: 1rem;
+  }
+}

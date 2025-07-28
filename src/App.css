@@ -2,30 +2,87 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Layout base styles for new app structure */
+.App-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  z-index: 100;
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.3s, color 0.3s;
+}
+
+.App-main {
+  display: flex;
+  flex: 1 1 auto;
+  margin-top: 56px; /* height of Navbar */
+  min-height: 0;
+  position: relative;
+}
+
+.Sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 56px);
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  transition: width 0.3s, background 0.3s, color 0.3s;
+  z-index: 90;
+  overflow-x: hidden;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+}
+
+.Feed {
+  flex: 1 1 auto;
+  margin-left: 260px;
+  padding: 32px 24px;
+  min-width: 0;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+@media (max-width: 900px) {
+  .Sidebar {
+    width: 72px;
+  }
+  .Feed {
+    margin-left: 72px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 600px) {
+  .Sidebar {
+    display: none;
+  }
+  .Feed {
+    margin-left: 0;
+    padding: 16px 4px;
+  }
+  .App-main {
+    margin-bottom: 60px; /* Space for BottomNav */
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* Remove old styles */
+.App-header, .App-logo, .App-link {
+  display: none !important;
 }
 
 @keyframes App-logo-spin {

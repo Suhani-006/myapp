@@ -1,0 +1,115 @@
+.MenuDrawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.32);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+  z-index: 999;
+}
+.MenuDrawer-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.MenuDrawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--card-bg, #fff);
+  color: var(--text, #181a1b);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -4px 32px rgba(0,0,0,0.16);
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(.4,1.2,.4,1);
+  z-index: 1000;
+  min-height: 210px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+  padding-top: 10px;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MenuDrawer.open {
+  transform: translateY(0);
+}
+
+.MenuDrawer-handle {
+  width: 44px;
+  height: 5px;
+  border-radius: 3px;
+  background: #ccc;
+  margin: 0 auto 18px auto;
+  opacity: 0.5;
+}
+
+.MenuDrawer-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  padding: 0 24px 18px 24px;
+}
+
+.MenuDrawer-action {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 0 18px 12px;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-family: inherit;
+}
+.MenuDrawer-action:focus, .MenuDrawer-action:hover {
+  background: #f3f3f3;
+  color: var(--primary, #007aff);
+}
+.MenuDrawer-action-icon {
+  font-size: 1.7rem;
+  width: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MenuDrawer-action-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 600px) {
+  .MenuDrawer {
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .MenuDrawer-actions {
+    padding: 0 10px 12px 10px;
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] .MenuDrawer {
+  background: var(--card-bg, #23272f);
+  color: var(--text, #f8f9fa);
+}
+[data-theme="dark"] .MenuDrawer-action:focus,
+[data-theme="dark"] .MenuDrawer-action:hover {
+  background: #23272f;
+  color: var(--primary, #4f8cff);
+}

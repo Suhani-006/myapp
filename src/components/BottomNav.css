@@ -1,0 +1,68 @@
+.BottomNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background: var(--navbar-bg);
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 120;
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.04);
+}
+
+.BottomNav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--navbar-text);
+  padding: 6px 0 0 0;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  outline: none;
+  height: 100%;
+  min-width: 0;
+  font-family: inherit;
+  /* Larger tap area for mobile */
+  touch-action: manipulation;
+}
+.BottomNav-item:focus, .BottomNav-item:hover {
+  color: var(--primary);
+  background: #f3f3f3;
+}
+.BottomNav-item.active {
+  color: var(--primary);
+  border-top: 2.5px solid var(--primary);
+  background: #f3f3f3;
+}
+.BottomNav-icon {
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BottomNav-label {
+  font-size: 0.92rem;
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+.BottomNav-menu .BottomNav-icon {
+  font-size: 2.1rem;
+}
+.BottomNav-menu {
+  /* visually distinguish menu if needed */
+}
+@media (min-width: 768px) {
+  .BottomNav {
+    display: none;
+  }
+}

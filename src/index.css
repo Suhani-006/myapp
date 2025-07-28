@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --background: linear-gradient(90deg, rgba(161, 89, 255, 0.3) 0%, rgba(242, 79, 30, 0.3) 100%);
+  --text: #181a1b;
+  --navbar-bg: #fff;
+  --navbar-text: #181a1b;
+  --sidebar-bg: #f4f5f7;
+  --sidebar-text: #181a1b;
+  --feed-bg: #f8f9fa;
+  --card-bg: #fff;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --primary: #007aff;
+  --accent: #ff3366;
+  --transition: background 0.3s, color 0.3s;
+}
+
+[data-theme="dark"] {
+  --background: linear-gradient(90deg, #23272f 0%, #4f8cff 100%);
+  --text: #f8f9fa;
+  --navbar-bg: #23272f;
+  --navbar-text: #f8f9fa;
+  --sidebar-bg: #23272f;
+  --sidebar-text: #f8f9fa;
+  --feed-bg: #181a1b;
+  --card-bg: #23272f;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  --primary: #4f8cff;
+  --accent: #ff5e99;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--text);
+  transition: var(--transition);
+}
