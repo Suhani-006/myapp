@@ -101,8 +101,7 @@ const Login = () => {
         <div className="Login-divider"><span>or sign in with</span></div>
         <div className="Login-socials">
           <button className="Login-social Login-google" aria-label="Sign in with Google">G</button>
-          <button className="Login-social Login-facebook" aria-label="Sign in with Facebook">f</button>
-          <button className="Login-social Login-github" aria-label="Sign in with GitHub">&#xF09B;</button>
+          {/* Only Google button shown */}
         </div>
         <div className="Login-bottom-links">
           <span>Don’t have an account?</span> <a href="#" className="Login-link">Sign up</a>
@@ -115,4 +114,4 @@ const Login = () => {
   );
 };
 
-export default Login; 
+export default Login;
