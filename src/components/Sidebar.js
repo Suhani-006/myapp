@@ -30,14 +30,14 @@ const Sidebar = ({ open, onClose, collapsed }) => {
   }, [open]);
 
   const handleSidebarLinkClick = (link) => {
-    if (link.label === 'Logout') {
-      onClose && onClose();
-      setTimeout(() => {
+    onClose && onClose();
+    setTimeout(() => {
+      if (link.label === 'Logout') {
         navigate('/login');
-      }, 120);
-    } else {
-      onClose && onClose();
-    }
+      } else {
+        navigate(link.to);
+      }
+    }, 120);
   };
 
   // Desktop/Tablet Sidebar (unchanged)

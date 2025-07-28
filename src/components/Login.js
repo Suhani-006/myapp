@@ -98,10 +98,10 @@ const Login = () => {
             {loading ? <span className="Login-spinner" /> : 'Sign In'}
           </button>
         </form>
-        <div className="Login-divider"><span>or sign in with</span></div>
+        <div className="Login-divider"><span>or continue with</span></div>
         <div className="Login-socials">
           <button className="Login-social Login-google" aria-label="Sign in with Google">G</button>
-          {/* Only Google button shown */}
+         
         </div>
         <div className="Login-bottom-links">
           <span>Don’t have an account?</span> <a href="#" className="Login-link">Sign up</a>

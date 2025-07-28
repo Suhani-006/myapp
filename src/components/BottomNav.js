@@ -31,19 +31,29 @@ const BottomNav = () => {
 
   return (
     <>
-      <nav className="BottomNav" role="navigation" aria-label="Bottom Navigation">
-        {navItems.map(item => (
-          <button
-            key={item.label}
-            className={`BottomNav-item${item.route && location.pathname.startsWith(item.route) ? ' active' : ''}${item.isMenu ? ' BottomNav-menu' : ''}`}
-            onClick={() => handleNavClick(item)}
-            aria-label={item.label}
-            type="button"
-          >
-            <span className="BottomNav-icon">{item.icon}</span>
-            <span className="BottomNav-label">{item.label}</span>
-          </button>
-        ))}
+      <nav
+        className="BottomNav"
+        role="navigation"
+        aria-label="Bottom Navigation"
+      >
+        <div className="BottomNav-grid">
+          {navItems.map(item => {
+            const isActive = item.route && location.pathname.startsWith(item.route);
+            return (
+              <button
+                key={item.label}
+                className={`BottomNav-item${isActive ? ' active' : ''}${item.isMenu ? ' BottomNav-menu' : ''}`}
+                onClick={() => handleNavClick(item)}
+                aria-label={item.label}
+                type="button"
+                tabIndex={0}
+              >
+                <span className="BottomNav-icon">{item.icon}</span>
+                <span className="BottomNav-label">{item.label}</span>
+              </button>
+            );
+          })}
+        </div>
       </nav>
       <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
