@@ -12,6 +12,9 @@ const Explore = () => {
   const { searchQuery, setSearchQuery, searchResults, setSearchResults } = useSearch();
   const [filteredPhotos, setFilteredPhotos] = useState([]);
 
+
+  
+
   useEffect(() => {
     const trimmedQuery = searchQuery.trim();
     if (trimmedQuery) {
@@ -30,6 +33,8 @@ const Explore = () => {
 
 
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  
 
   
   return (
