@@ -26,6 +26,7 @@ transition: var(--transition);
   margin: auto;
   width: 100%;
   max-height: 95vh;
+  position: relative; /* Added for absolute positioning context */
 }
 
 .PhotoModal-left {
@@ -122,4 +123,93 @@ transition: var(--transition);
   .PhotoModal-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* New styles for vertical button group */
+.PhotoModal-actions {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 10;
+  padding-left: 1.2rem;
+}
+
+.PhotoModal-action-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.18s;
+  position: relative;
+}
+.PhotoModal-action-bg {
+  background: rgba(255,255,255,0.72);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #a259ff22;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.PhotoModal-action-btn:hover .PhotoModal-action-bg,
+.PhotoModal-action-btn:focus .PhotoModal-action-bg {
+  background: rgba(162,89,255,0.18);
+  box-shadow: 0 4px 16px #a259ff33;
+}
+.PhotoModal-action-btn.liked .PhotoModal-action-bg {
+  background: rgba(224,36,94,0.18);
+}
+.PhotoModal-action-btn.saved .PhotoModal-action-bg {
+  background: rgba(162,89,255,0.18);
+}
+.PhotoModal-action-btn svg {
+  pointer-events: none;
+}
+
+.PhotoModal-action-btn.liked svg path {
+  stroke: #e0245e;
+  fill: #e0245e;
+}
+.PhotoModal-action-btn.saved svg path {
+  stroke: #a259ff;
+  fill: #a259ff;
+}
+
+/* Responsive: horizontal at bottom on mobile */
+@media (max-width: 768px) {
+  .PhotoModal-actions {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    transform: none;
+    width: 100%;
+    background: none;
+  }
+  .PhotoModal-action-btn,
+  .PhotoModal-action-bg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Highlight active recommended photo */
+.PhotoModal-thumb.active {
+  border: 2.5px solid #a259ff;
+  box-shadow: 0 2px 8px #a259ff33;
 }

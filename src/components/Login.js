@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithP
 import { useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 
-const Login = () => {
+const Login = ({ onLoginSuccess }) => {
   const { dark } = useDarkMode();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -44,7 +44,9 @@ const Login = () => {
         console.log('Login Successful:', userCredential.user);
       }
 
-      navigate('/home'); // Redirect after login/signup
+      if (onLoginSuccess) {
+        onLoginSuccess();
+      }
     } catch (err) {
       console.error(err);
       setError(err.message);
@@ -69,7 +71,9 @@ const Login = () => {
         uid: user.uid,
       });
 
-      navigate('/home');
+      if (onLoginSuccess) {
+        onLoginSuccess();
+      }
     } catch (error) {
       console.error('Google Sign-in Error:', error);
       setError(error.message);

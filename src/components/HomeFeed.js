@@ -25,8 +25,8 @@ const HomeFeed = () => {
     setTimeout(() => {
       const newPosts = photosData.map(photo => ({
         ...photo,
-        id: photo.id + (page - 1) * photosData.length,
-        title: `${photo.title} (Page ${page})`
+        id: photo.id ? photo.id + (page - 1) * photosData.length : photo.image_url,
+        title: photo.title ? `${photo.title} (Page ${page})` : undefined
       }));
       
       setPosts(prev => [...prev, ...newPosts]);
@@ -50,23 +50,22 @@ const HomeFeed = () => {
       <div className="HomeFeed-container">
         {posts.map((post, index) => (
           <div 
-            key={post.id} 
+            key={post.id || post.image_url} 
             className="HomeFeed-card"
             ref={index === posts.length - 1 ? lastPostRef : null}
           >
             <div className="HomeFeed-image-container">
               <img 
                 src={post.image_url} 
-                alt={post.title}
+                alt={post.title || post.image_url}
                 className="HomeFeed-image"
                 loading="lazy"
               />
             </div>
             <div className="HomeFeed-content">
-              <h3 className="HomeFeed-title">{post.title}</h3>
-              <p className="HomeFeed-description">{post.description}</p>
+              <h3 className="HomeFeed-title">{post.title || 'No Title'}</h3>
               <div className="HomeFeed-tags">
-                <span className="HomeFeed-tag">{post.tag}</span>
+                <span className="HomeFeed-tag">{post.category || 'No Category'}</span>
               </div>
             </div>
           </div>

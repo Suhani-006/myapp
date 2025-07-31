@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import { auth } from './firebase';
 
 // Placeholder imports for new components
 import Navbar from './components/Navbar';
@@ -18,6 +19,31 @@ import { DarkModeProvider } from './components/DarkModeContext';
 import { SearchProvider } from './components/SearchContext';
 import FeedContainer from './components/FeedContainer';
 import BottomNav from './components/BottomNav';
+
+
+
+
+function RequireAuth({ children }) {
+  const [isAuth, setIsAuth] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setIsAuth(!!user);
+    });
+    return unsubscribe;
+  }, []);
+
+  if (isAuth === null) {
+    // Loading state
+    return <div>Loading...</div>;
+  }
+  if (!isAuth) {
+    // Not authenticated, redirect to login
+    window.location.replace('/login');
+    return null;
+  }
+  return children;
+}
 
 function App() {
   // Sidebar state
@@ -47,6 +73,16 @@ function App() {
   const handleSidebarToggle = () => setSidebarOpen((open) => !open);
   const handleSidebarClose = () => setSidebarOpen(false);
 
+  // Track authentication state
+  const [isAuth, setIsAuth] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setIsAuth(!!user);
+    });
+    return unsubscribe;
+  }, []);
+
   return (
     <DarkModeProvider>
       <SearchProvider>
@@ -68,32 +104,38 @@ function App() {
           }}
         />
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/*" element={
-            <div className="App-layout">
-              <Navbar onSidebarToggle={handleSidebarToggle} isSidebarOpen={sidebarOpen} />
-              <div className="App-main">
-                {/* Sidebar only for desktop/tablet */}
-                {window.innerWidth > 767 && (
-                  <Sidebar open={sidebarOpen} collapsed={sidebarCollapsed} onClose={handleSidebarClose} />
-                )}
-                <FeedContainer>
-                  <Routes>
-                    <Route path="/home" element={<HomeFeed />} />
-                    <Route path="/explore" element={<Explore />} />
-                    <Route path="/categories" element={<Categories />} />
-                    <Route path="/saved" element={<Saved />} />
-                    <Route path="/liked" element={<Liked />} />
-                    {/* Add Profile route */}
-                    <Route path="/profile" element={<div>Profile Page</div>} />
-                    <Route path="*" element={<Navigate to="/home" />} />
-                  </Routes>
-                </FeedContainer>
-                {/* BottomNav always visible on mobile/tablet */}
-                <BottomNav />
-              </div>
-            </div>
-          } />
+          <Route
+            path="/login"
+            element={<Login onLoginSuccess={() => window.location.replace('/categories')} />}
+          />
+          <Route
+            path="/*"
+            element={
+              <RequireAuth>
+                <div className="App-layout">
+                  <Navbar onSidebarToggle={handleSidebarToggle} isSidebarOpen={sidebarOpen} />
+                  <div className="App-main">
+                    {/* Sidebar only for desktop/tablet */}
+                    {window.innerWidth > 767 && (
+                      <Sidebar open={sidebarOpen} collapsed={sidebarCollapsed} onClose={handleSidebarClose} />
+                    )}
+                    <FeedContainer>
+                      <Routes>
+                        <Route path="/home" element={<HomeFeed />} />
+                        <Route path="/explore" element={<Explore />} />
+                        <Route path="/categories" element={<Categories />} />
+                        <Route path="/saved" element={<Saved />} />
+                        <Route path="/liked" element={<Liked />} />
+                        <Route path="/profile" element={<div>Profile Page</div>} />
+                        <Route path="*" element={<Navigate to="/categories" />} />
+                      </Routes>
+                    </FeedContainer>
+                    <BottomNav />
+                  </div>
+                </div>
+              </RequireAuth>
+            }
+          />
         </Routes>
       </SearchProvider>
     </DarkModeProvider>
