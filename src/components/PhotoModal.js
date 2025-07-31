@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PhotoModal.css';
-import { doc, setDoc, getDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
 import { db, auth } from "../firebase";
 
 // PhotoModalActions component
@@ -80,94 +80,130 @@ const useIsMobile = () => {
   return isMobile;
 };
 
-const PhotoModal = ({ photo, recommendedPhotos, onClose }) => {
+const PhotoModal = ({ photos, currentIndex, onClose }) => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [index, setIndex] = useState(currentIndex || 0);
   const isMobile = useIsMobile();
 
-  // Check if photo is liked
-  const isPhotoLiked = async (photoId) => {
+  const modalPhoto = photos[index];
+
+  // Check if photo is liked by current user
+  const checkLiked = async (photoId) => {
     const user = auth.currentUser;
     if (!user) return false;
-    const docRef = doc(db, "users", user.uid, "likedFeeds", photoId);
+    const docRef = doc(db, "users", user.uid, "likedFeeds", photoId.toString());
     const docSnap = await getDoc(docRef);
     return docSnap.exists();
   };
 
+  // On photo/index change, check liked state
+  useEffect(() => {
+    let mounted = true;
+    if (modalPhoto && modalPhoto.id) {
+      checkLiked(modalPhoto.id).then(isLiked => {
+        if (mounted) setLiked(isLiked);
+      });
+    }
+    return () => { mounted = false; };
+  }, [modalPhoto]);
+
   // Handle Like with Firebase
   const handleLike = async () => {
     const user = auth.currentUser;
-    if (!user) return;
+    if (!user || !modalPhoto) return;
 
-    setLiked((prev) => !prev);
-
-    try {
-      await setDoc(
-        doc(db, "users", user.uid, "likedFeeds", photo.id), // Save under user > likedFeeds > photo.id
-        photo
-      );
-      console.log("Photo liked and saved in Firebase!");
-    } catch (error) {
-      console.error("Error liking photo:", error);
+    if (!liked) {
+      setLiked(true);
+      try {
+        await setDoc(
+          doc(db, "users", user.uid, "likedFeeds", modalPhoto.id.toString()),
+          modalPhoto
+        );
+      } catch (error) {
+        setLiked(false);
+        console.error("Error liking photo:", error);
+      }
+    } else {
+      setLiked(false);
+      try {
+        await deleteDoc(
+          doc(db, "users", user.uid, "likedFeeds", modalPhoto.id.toString())
+        );
+      } catch (error) {
+        setLiked(true);
+        console.error("Error unliking photo:", error);
+      }
     }
   };
 
   // Handle Save with Firebase
   const handleSave = async () => {
     const user = auth.currentUser;
-    if (!user) return;
+    if (!user || !modalPhoto) return;
     setSaved(s => !s);
     try {
       await setDoc(
-        doc(db, "users", user.uid, "savedFeeds", photo.id),
-        photo
+        doc(db, "users", user.uid, "savedFeeds", modalPhoto.id.toString()),
+        modalPhoto
       );
-      // Optionally show a message
     } catch (error) {
       console.error("Error saving photo:", error);
     }
   };
 
-  // Handle Skip: show next recommended photo in modal
+  // Handle Skip: show next photo in the feed (not recommended)
   const handleSkip = () => {
-    if (recommendedPhotos && recommendedPhotos.length > 0) {
-      const nextIdx = (currentIndex + 1) % recommendedPhotos.length;
-      setCurrentIndex(nextIdx);
+    if (index < photos.length - 1) {
+      setIndex(index + 1);
+    } else {
+      onClose();
     }
   };
 
-  // Show current photo (first is the passed photo, then recommended)
-  const modalPhoto = currentIndex === 0 ? photo : recommendedPhotos[currentIndex - 1];
+  // For recommended photos, exclude the current photo and show up to 9 others
+  const recommendedPhotos = photos
+    .filter((p, i) => i !== index)
+    .slice(0, 9);
+
+  if (!modalPhoto) return null;
 
   return (
     <div className="PhotoModal-overlay" onClick={onClose}>
       <div className="PhotoModal-container" onClick={e => e.stopPropagation()}>
-        <PhotoModalActions
-          liked={liked}
-          saved={saved}
-          onLike={handleLike}
-          onSave={handleSave} // <-- now saves to Firebase
-          onSkip={handleSkip}
-          isMobile={isMobile}
-        />
+        {/* Close button in the top-right corner */}
+        <button
+          className="PhotoModal-close-btn"
+          aria-label="Close"
+          onClick={onClose}
+        >
+          ×
+        </button>
         <div className="PhotoModal-left">
           <img src={modalPhoto.image_url} alt={modalPhoto.title} className="PhotoModal-main-img" />
           <div className="PhotoModal-info">
             <h2>{modalPhoto.title}</h2>
             <p>{modalPhoto.description}</p>
           </div>
+          <PhotoModalActions
+            liked={liked}
+            saved={saved}
+            onLike={handleLike}
+            onSave={handleSave}
+            onSkip={handleSkip}
+            isMobile={isMobile}
+          />
         </div>
         <div className="PhotoModal-right">
           <h3>Recommended</h3>
-          <div className="PhotoModal-grid">
+          <div className="recommended-grid">
             {recommendedPhotos.map((item, idx) => (
               <img
                 key={item.id}
                 src={item.image_url}
                 alt={item.title}
-                className={`PhotoModal-thumb${currentIndex === idx + 1 ? ' active' : ''}`}
-                onClick={() => setCurrentIndex(idx + 1)}
+                className={index === photos.findIndex(p => p.id === item.id) ? "PhotoModal-thumb active" : "PhotoModal-thumb"}
+                onClick={() => setIndex(photos.findIndex(p => p.id === item.id))}
               />
             ))}
           </div>

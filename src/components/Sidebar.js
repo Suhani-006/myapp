@@ -8,7 +8,7 @@ const sidebarLinks = [
   { icon: '🔎', label: 'Explore', aria: 'Explore', to: '/explore' },
   { icon: '🗂️', label: 'Categories', aria: 'Categories', to: '/categories' },
   { icon: '📌', label: 'Saved', aria: 'Saved', to: '/saved' },
-  { icon: '❤️', label: 'Liked', aria: 'Liked', to: '/liked' },
+  { icon: '❤️', label: 'Liked', aria: 'Liked', to: '/liked' }, // This is the Liked section
   { icon: '🚪', label: 'Logout', aria: 'Logout', to: '/login' },
 ];
 

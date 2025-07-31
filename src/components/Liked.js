@@ -66,3 +66,5 @@ const Liked = () => {
 };
 
 export default Liked;
+
+// This component already fetches and displays liked photos from Firestore

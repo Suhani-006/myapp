@@ -110,4 +110,13 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-} 
+}
+
+.HomeFeed-action-btn.liked svg path {
+  stroke: #e0245e;
+  fill: #e0245e;
+}
+.HomeFeed-action-btn.saved svg path {
+  stroke: #a259ff;
+  fill: #a259ff;
+}

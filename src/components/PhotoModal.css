@@ -113,8 +113,9 @@ transition: var(--transition);
     max-height: 50vh;
   }
 
+  /* Always 3 columns for recommended, even on mobile */
   .PhotoModal-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -208,8 +209,153 @@ transition: var(--transition);
   }
 }
 
+/* Make actions horizontal, smaller, and below the photo but above recommended */
+.PhotoModal-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  margin: 1.2rem 0 0.7rem 0;
+  position: static;
+  left: unset;
+  top: unset;
+  transform: none;
+  padding: 0;
+  background: none;
+  z-index: 10;
+}
+
+.PhotoModal-action-btn,
+.PhotoModal-action-bg {
+  width: 40px;
+  height: 40px;
+}
+
+.PhotoModal-action-btn {
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.18s;
+  position: relative;
+}
+
+.PhotoModal-action-bg {
+  background: rgba(255,255,255,0.72);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #a259ff22;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.PhotoModal-action-btn:hover .PhotoModal-action-bg,
+.PhotoModal-action-btn:focus .PhotoModal-action-bg {
+  background: rgba(162,89,255,0.18);
+  box-shadow: 0 4px 16px #a259ff33;
+}
+
+.PhotoModal-action-btn.liked .PhotoModal-action-bg {
+  background: rgba(224,36,94,0.18);
+}
+.PhotoModal-action-btn.saved .PhotoModal-action-bg {
+  background: rgba(162,89,255,0.18);
+}
+.PhotoModal-action-btn svg {
+  pointer-events: none;
+}
+
+.PhotoModal-action-btn.liked svg path {
+  stroke: #e0245e;
+  fill: #e0245e;
+}
+.PhotoModal-action-btn.saved svg path {
+  stroke: #a259ff;
+  fill: #a259ff;
+}
+
+/* Responsive: keep actions horizontal and small on mobile */
+@media (max-width: 768px) {
+  .PhotoModal-actions {
+    margin: 0.8rem 0 0.5rem 0;
+    gap: 0.8rem;
+  }
+  .PhotoModal-action-btn,
+  .PhotoModal-action-bg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 /* Highlight active recommended photo */
 .PhotoModal-thumb.active {
   border: 2.5px solid #a259ff;
   box-shadow: 0 2px 8px #a259ff33;
+}
+
+/* Recommended section grid */
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Recommended images styling */
+.recommended-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.recommended-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure it stays 3 columns even in mobile view */
+@media (max-width: 768px) {
+  .recommended-grid {
+    grid-template-columns: repeat(3, 1fr); /* Still 3 columns on mobile */
+    gap: 8px;
+  }
+}
+
+/* Close button style */
+.PhotoModal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  z-index: 20;
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.PhotoModal-close-btn:hover,
+.PhotoModal-close-btn:focus {
+  background: #a259ff;
+  color: #fff;
+  box-shadow: 0 4px 16px #a259ff33;
+  outline: none;
 }
