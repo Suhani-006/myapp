@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Table of Contents
+# 📖 Table of Contents
 
 - [🎯 Objective](#objective)
 - [✨ Key Features](#key-features)
@@ -29,7 +29,7 @@
 ---
 
 <div id="key-features"></div>
-## ✨ Key Features
+# ✨ Key Features
 
 - ♾️ **Infinite Feed** – Seamlessly loads more posts as you scroll.
 - 🔍 **Smart Recommendations** – Posts based on selected interests (coming in final version).
@@ -42,7 +42,7 @@
 ---
 
 <div id="screenshots"></div>
-## 🖼️ Screenshots
+# 🖼️ Screenshots
 
 <table>
   <tr>
@@ -75,7 +75,7 @@
 <div id="how-to-run-locally"></div>
 ## 🛠️ How to Run Locally
 
-### 1. Install Dependencies
+# 1. Install Dependencies
 ```bash
 npm install
 
@@ -86,7 +86,7 @@ npm install
 npm install
 ```
 
-### 2. Configure Firebase
+# 2. Configure Firebase
 
 Add your Firebase config to a `.env` file:
 
@@ -99,14 +99,14 @@ VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
 VITE_APP_ID=your_app_id
 ```
 
-### 3. Start the App
+# 3. Start the App
 ```bash
 npm run dev
 ```
 
 ---
 <div id= "folder-structure"></div>
-## 📂 Folder Structure
+# 📂 Folder Structure
 
 ```bash
 infiScroll/
@@ -191,7 +191,35 @@ infiScroll/
 | Aayush Bhaiya| Mentor      |
 
 ---
+<div id= "analytics--engagement-tracking"></div>
+## 📊 Analytics & Engagement Tracking
 
-## 🚀 Project Submission
+We use **Firebase Analytics** and **custom event logging** to better understand user behavior and continuously improve the platform.
+
+# 🎯 Tracked Events
+
+| Event Name         | Trigger Location     | Description                                   |
+|--------------------|----------------------|-----------------------------------------------|
+| `onboard_complete` | Onboarding Page      | User completed initial setup                  |
+| `content_view`     | Explore Feed         | User viewed a content card                    |
+| `like_post`        | Post Card            | User liked a specific post                    |
+| `save_post`        | Post Card            | User saved a post to favorites                |
+| `upload_content`   | Upload Page          | User uploaded their own media                 |
+| `scroll_depth`     | Explore Page         | Measures how deep the user scrolls            |
+| `toggle_theme`     | Settings Page        | User toggled between Light/Dark mode          |
+
+# 📈 Insights
+
+- We use this data to:
+  - Prioritize popular categories (e.g., SPORTS, TECH)
+  - Monitor active user sessions per day
+  - Track how much content users actually scroll through
+  - Optimize which uploads get promoted first
+
+> 🔐 All analytics are anonymized and comply with Firebase's data privacy standards.
+
+
+<div id= "project-submission"></div>
+# 🚀 Project Submission
 
 > Built with ❤️ by **Team SD_009** for **IITI Summer of Code 2025**
