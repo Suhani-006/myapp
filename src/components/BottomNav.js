@@ -8,7 +8,7 @@ const navItems = [
   { label: 'Home', icon: '🏠', route: '/home' },
   { label: 'Explore', icon: '🔍', route: '/explore' },
   { label: 'Upload', icon: '⬆️', route: '/upload' },
-  { label: 'Categories', icon: '📂', route: '/categories' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' },
   { label: 'Menu', icon: <span style={{fontSize:'2rem',lineHeight:1}}>&#9776;</span>, isMenu: true },
 ];
 

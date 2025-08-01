@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 
 const Login = ({ onLoginSuccess }) => {
-  const { dark } = useDarkMode();
+  const { dark, toggleDark } = useDarkMode();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -49,7 +49,33 @@ const Login = ({ onLoginSuccess }) => {
       }
     } catch (err) {
       console.error(err);
-      setError(err.message);
+      // Handle specific Firebase auth errors with user-friendly messages
+      let errorMessage = '';
+      switch (err.code) {
+        case 'auth/user-not-found':
+        case 'auth/wrong-password':
+        case 'auth/invalid-credential':
+          errorMessage = 'Username or password is wrong. Please try again.';
+          break;
+        case 'auth/invalid-email':
+          errorMessage = 'Please enter a valid email address.';
+          break;
+        case 'auth/weak-password':
+          errorMessage = 'Password should be at least 6 characters long.';
+          break;
+        case 'auth/email-already-in-use':
+          errorMessage = 'An account with this email already exists. Please sign in instead.';
+          break;
+        case 'auth/too-many-requests':
+          errorMessage = 'Too many failed attempts. Please try again later.';
+          break;
+        case 'auth/network-request-failed':
+          errorMessage = 'Network error. Please check your internet connection.';
+          break;
+        default:
+          errorMessage = 'An error occurred. Please try again.';
+      }
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -76,12 +102,35 @@ const Login = ({ onLoginSuccess }) => {
       }
     } catch (error) {
       console.error('Google Sign-in Error:', error);
-      setError(error.message);
+      let errorMessage = '';
+      switch (error.code) {
+        case 'auth/popup-closed-by-user':
+          errorMessage = 'Sign-in was cancelled. Please try again.';
+          break;
+        case 'auth/popup-blocked':
+          errorMessage = 'Pop-up was blocked. Please allow pop-ups and try again.';
+          break;
+        case 'auth/network-request-failed':
+          errorMessage = 'Network error. Please check your internet connection.';
+          break;
+        default:
+          errorMessage = 'Google sign-in failed. Please try again.';
+      }
+      setError(errorMessage);
     }
   };
 
   return (
     <div className={`Login-bg${dark ? ' dark' : ''}`}>
+      {/* Theme Toggle Button */}
+      <button 
+        className="Login-theme-toggle"
+        onClick={toggleDark}
+        aria-label="Toggle theme"
+      >
+        {dark ? '☀️' : '🌙'}
+      </button>
+      
       <div className="Login-container">
         <h2 className="Login-headline">{isSignup ? 'Create an Account ✨' : 'Welcome back 👋'}</h2>
         <div className="Login-subline">

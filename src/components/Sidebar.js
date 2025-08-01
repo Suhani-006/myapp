@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 const sidebarLinks = [
   { icon: '🏠', label: 'Home Feed', aria: 'Home', to: '/home' },
   { icon: '🔎', label: 'Explore', aria: 'Explore', to: '/explore' },
-  { icon: '🗂️', label: 'Categories', aria: 'Categories', to: '/categories' },
+  { icon: '⚙️', label: 'Settings', aria: 'Settings', to: '/settings' },
   { icon: '📌', label: 'Saved', aria: 'Saved', to: '/saved' },
   { icon: '❤️', label: 'Liked', aria: 'Liked', to: '/liked' }, // This is the Liked section
   { icon: '🚪', label: 'Logout', aria: 'Logout', to: '/login' },

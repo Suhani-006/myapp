@@ -6,8 +6,8 @@
   padding: 0 16px;
   background: var(--navbar-bg);
   color: var(--navbar-text);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(161, 89, 255, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(161, 89, 255, 0.1);
   z-index: 100;
   position: fixed;
   top: 0;
@@ -17,6 +17,7 @@
   width: 100vw;
   max-width: 100vw;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
 }
 
 .Navbar-logo {

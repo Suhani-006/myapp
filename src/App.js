@@ -15,6 +15,7 @@ import Categories from './components/Categories';
 import Saved from './components/Saved';
 import Liked from './components/Liked';
 import Login from './components/Login';
+import Settings from './components/Settings';
 import { DarkModeProvider } from './components/DarkModeContext';
 import { SearchProvider } from './components/SearchContext';
 import FeedContainer from './components/FeedContainer';
@@ -123,9 +124,10 @@ function App() {
                       <Routes>
                         <Route path="/home" element={<HomeFeed />} />
                         <Route path="/explore" element={<Explore />} />
-                        <Route path="/categories" element={<Categories />} />
+                        <Route path="/settings" element={<Settings />} />
                         <Route path="/saved" element={<Saved />} />
                         <Route path="/liked" element={<Liked />} />
+                        <Route path="/categories" element={<Categories />} />
                         <Route path="/profile" element={<div>Profile Page</div>} />
                         <Route path="*" element={<Navigate to="/categories" />} />
                       </Routes>

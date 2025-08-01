@@ -6,6 +6,16 @@ import PhotoModal from './PhotoModal';
 
 const BATCH_SIZE = 18;
 
+// Utility to shuffle an array (Fisher-Yates)
+function shuffleArray(array) {
+  const arr = array.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 const Explore = () => {
   const { searchQuery, setSearchQuery, searchResults, setSearchResults } = useSearch();
   const [filteredPhotos, setFilteredPhotos] = useState([]);
@@ -41,10 +51,12 @@ const Explore = () => {
       results = photosData;
       setSearchResults([]);
     }
-    setFilteredPhotos(results);
-    setDisplayedPhotos(results.slice(0, BATCH_SIZE));
+    // Shuffle results for random order
+    const shuffled = shuffleArray(results);
+    setFilteredPhotos(shuffled);
+    setDisplayedPhotos(shuffled.slice(0, BATCH_SIZE));
     setPage(1);
-    setHasMore(results.length > BATCH_SIZE);
+    setHasMore(shuffled.length > BATCH_SIZE);
   }, [searchQuery, setSearchResults]);
 
   // Load more photos (infinite scroll)

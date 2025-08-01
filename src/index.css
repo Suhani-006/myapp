@@ -13,18 +13,18 @@ code {
 }
 
 :root {
-  --background: linear-gradient(90deg, rgba(161, 89, 255, 0.3) 0%, rgba(242, 79, 30, 0.3) 100%);
+  --background: linear-gradient(135deg, #c8a4ff 0%, #ff8a65 100%);
   --text: #181a1b;
-  --navbar-bg: #fff;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
   --navbar-text: #181a1b;
-  --sidebar-bg: #f4f5f7;
+  --sidebar-bg: rgba(255, 255, 255, 0.9);
   --sidebar-text: #181a1b;
-  --feed-bg: #f8f9fa;
-  --card-bg: #fff;
-  --card-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  --primary: #007aff;
+  --feed-bg: rgba(255, 255, 255, 0.15);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 4px 20px rgba(161, 89, 255, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --primary: #a259ff;
   --accent: #ff3366;
-  --transition: background 0.3s, color 0.3s;
+  --transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 [data-theme="dark"] {

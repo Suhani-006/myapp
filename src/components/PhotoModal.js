@@ -161,10 +161,28 @@ const PhotoModal = ({ photos, currentIndex, onClose }) => {
     }
   };
 
-  // For recommended photos, exclude the current photo and show up to 9 others
-  const recommendedPhotos = photos
-    .filter((p, i) => i !== index)
-    .slice(0, 9);
+  // Recommendation engine: prioritize same category, then fill up to 9
+  const getRecommendedPhotos = () => {
+    if (!modalPhoto) return [];
+    // Exclude the current photo
+    const others = photos.filter((p, i) => i !== index);
+    // 1. Same category
+    const sameCategory = others.filter(
+      p => p.category && modalPhoto.category &&
+        p.category.toLowerCase().trim() === modalPhoto.category.toLowerCase().trim()
+    );
+    // 2. Fill with others (not same category)
+    const notSameCategory = others.filter(
+      p => !(
+        p.category && modalPhoto.category &&
+        p.category.toLowerCase().trim() === modalPhoto.category.toLowerCase().trim()
+      )
+    );
+    // 3. Combine and limit to 9
+    return [...sameCategory, ...notSameCategory].slice(0, 9);
+  };
+
+  const recommendedPhotos = getRecommendedPhotos();
 
   if (!modalPhoto) return null;
 

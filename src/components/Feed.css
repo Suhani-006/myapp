@@ -1,7 +1,7 @@
 .Feed {
   width: 100%;
   min-height: 100%;
-  background: var(--feed-bg);
+  background: var(--background);
   transition: background 0.3s;
 }
 .Feed-grid {
@@ -18,7 +18,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1px solid rgba(161, 89, 255, 0.05);
+  position: relative;
 }
 .Feed-photo-card img {
   width: 100%;
@@ -26,6 +28,10 @@
   object-fit: cover;
   display: block;
   transition: filter 0.2s;
+}
+.Feed-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(161, 89, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 .Feed-photo-card:hover img {
   filter: brightness(0.95) saturate(1.1);
@@ -119,4 +125,74 @@
 .HomeFeed-action-btn.saved svg path {
   stroke: #a259ff;
   fill: #a259ff;
+}
+
+/* Feed photo action buttons */
+.Feed-photo-actions {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Feed-photo-card:hover .Feed-photo-actions {
+  opacity: 1;
+}
+
+.Feed-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.Feed-action-btn:hover {
+  transform: scale(1.1);
+}
+
+.Feed-action-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.Feed-action-bg {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.Feed-action-btn:hover .Feed-action-bg {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.Feed-action-btn.liked .Feed-action-bg {
+  background: rgba(224, 36, 94, 0.8);
+}
+
+.Feed-action-btn.saved .Feed-action-bg {
+  background: rgba(161, 89, 255, 0.8);
+}
+
+.Feed-spinner-small {
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }

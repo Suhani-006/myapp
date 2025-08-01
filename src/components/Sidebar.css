@@ -7,12 +7,13 @@
   height: 100%;
   padding-top: 24px;
   transition: width 0.3s, left 0.3s, background 0.3s, color 0.3s;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+  box-shadow: 4px 0 20px rgba(161, 89, 255, 0.08), 2px 0 8px rgba(0, 0, 0, 0.04);
   z-index: 200;
   position: fixed;
   left: 0;
   top: 56px;
   bottom: 0;
+  backdrop-filter: blur(10px);
 }
 .Sidebar.collapsed {
   width: 72px;
@@ -64,12 +65,13 @@
 }
 .Sidebar-item:hover,
 .Sidebar-item:focus {
-  background: #E6F0FF;
+  background: rgba(161, 89, 255, 0.1);
   color: var(--primary);
-  border-left: 4px solid #2563EB;
+  border-left: 4px solid var(--primary);
   transform: translateX(4px) scale(1.02);
   padding-left: 28px;
   outline: none;
+  box-shadow: 0 2px 12px rgba(161, 89, 255, 0.15);
 }
 [data-theme="dark"] .Sidebar-item:hover,
 [data-theme="dark"] .Sidebar-item:focus {
@@ -78,11 +80,12 @@
   border-left: 4px solid #3B82F6;
 }
 .Sidebar-item.active {
-  background: none;
+  background: rgba(161, 89, 255, 0.05);
   color: var(--primary);
   font-weight: 600;
-  border-left: 4px solid #2563EB;
+  border-left: 4px solid var(--primary);
   padding-left: 28px;
+  box-shadow: 0 2px 8px rgba(161, 89, 255, 0.1);
   /* Keep left border even when not hovered */
 }
 [data-theme="dark"] .Sidebar-item.active {
@@ -92,9 +95,10 @@
 }
 .Sidebar-item.active:hover,
 .Sidebar-item.active:focus {
-  background: #E6F0FF;
+  background: rgba(161, 89, 255, 0.15);
   color: var(--primary);
   transform: translateX(4px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(161, 89, 255, 0.2);
 }
 [data-theme="dark"] .Sidebar-item.active:hover,
 [data-theme="dark"] .Sidebar-item.active:focus {

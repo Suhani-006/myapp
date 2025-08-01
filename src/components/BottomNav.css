@@ -5,13 +5,14 @@
   bottom: 0;
   height: 60px;
   background: var(--navbar-bg);
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(161, 89, 255, 0.1);
   z-index: 120;
-  box-shadow: 0 -1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 -4px 20px rgba(161, 89, 255, 0.08), 0 -2px 8px rgba(0, 0, 0, 0.04);
   padding: 0 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(10px);
 }
 
 .BottomNav-grid {
@@ -50,9 +51,9 @@
 }
 .BottomNav-item.active {
   color: var(--primary);
-  background: linear-gradient(90deg, #e6f0ff 0%, #f3f3f3 100%);
+  background: linear-gradient(90deg, rgba(161, 89, 255, 0.1) 0%, rgba(161, 89, 255, 0.05) 100%);
   border-top: 3px solid var(--primary);
-  box-shadow: 0 -2px 8px #a259ff11;
+  box-shadow: 0 -2px 12px rgba(161, 89, 255, 0.15);
 }
 .BottomNav-icon {
   font-size: 2rem;

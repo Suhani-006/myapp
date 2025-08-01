@@ -21,7 +21,7 @@
   color: var(--text, #181a1b);
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  box-shadow: 0 -4px 32px rgba(0,0,0,0.16);
+  box-shadow: 0 -8px 40px rgba(161, 89, 255, 0.12), 0 -4px 16px rgba(0, 0, 0, 0.08);
   transform: translateY(100%);
   transition: transform 0.28s cubic-bezier(.4,1.2,.4,1);
   z-index: 1000;
@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 .MenuDrawer.open {
   transform: translateY(0);
@@ -76,8 +77,8 @@
   font-family: inherit;
 }
 .MenuDrawer-action:focus, .MenuDrawer-action:hover {
-  background: #f3f3f3;
-  color: var(--primary, #007aff);
+  background: rgba(161, 89, 255, 0.1);
+  color: var(--primary, #a259ff);
 }
 .MenuDrawer-action-icon {
   font-size: 1.7rem;
