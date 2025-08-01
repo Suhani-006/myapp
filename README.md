@@ -46,14 +46,14 @@
 
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Explore_Light.png" width="200" alt="Explore - Light Mode"><br><b>Explore – Light Mode</b></td>
-    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Explore_Dark.png" width="200" alt="Explore - Dark Mode"><br><b>Explore – Dark Mode</b></td>
-    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Post_Expanded.png" width="200" alt="Post Detail View"><br><b>Post Detail View</b></td>
+    <td><img src="https://github.com/user-attachments/assets/8f488965-d31a-492d-b0b0-cf874d93a90d" width="200" alt="Explore - Light Mode"><br><b>Explore – Light Mode</b></td>
+    <td><img src="https://github.com/user-attachments/assets/3afae2a3-238d-43e8-8e83-864d2c2b5a27" width="200" alt="Explore - Dark Mode"><br><b>Explore – Dark Mode</b></td>
+    <td><img src="https://github.com/user-attachments/assets/70b82b99-e5d2-482c-a0ed-1e3cb0d01bd1" width="200" alt="Post Detail View"><br><b>Post Detail View</b></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Recommended.png" width="200" alt="Recommended Feed"><br><b>Recommended Feed</b></td>
-    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_SportsFeed.png" width="200" alt="Category Scroll - Sports"><br><b>Category Scroll – Sports</b></td>
-    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Explore_Tab_Navigation.png" width="200" alt="Bottom Navigation"><br><b>Bottom Navigation</b></td>
+    <td><img src="https://github.com/user-attachments/assets/e74a1a03-b0d8-4c7d-adb8-60ef704a6744" width="200" alt="Recommended Feed"><br><b>Recommended Feed</b></td>
+    <td><img src="https://github.com/user-attachments/assets/9e928ac9-df46-442c-bdd3-a45b0556fdb0" width="200" alt="Category Scroll - Sports"><br><b>Category Scroll – Sports</b></td>
+    
   </tr>
 </table>
 
