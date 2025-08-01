@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 📱 infiScroll – Infinite Feed Recommendation Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**infiScroll** is a sleek, scroll-based content recommendation app designed to deliver an endless stream of personalized posts — including **Photos**. With smart onboarding, dynamic themes, and an intuitive UI, it's built for users who crave simplicity without sacrificing discovery.
 
-## Available Scripts
+🔗 **Live Demo**: [Try it on Vercel](https://infiscroll-git-master-krishas-projects-e9c3ea3f.vercel.app/login)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📖 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [🎯 Objective](#objective)
+- [✨ Key Features](#key-features)
+- [🖼️ Screenshots](#screenshots)
+- [🧠 Tech Stack](#tech-stack)
+- [🛠️ How to Run Locally](#how-to-run-locally)
+- [📂 Folder Structure](#folder-structure)
+- [🧪 Challenges Faced](#challenges-faced)
+- [📊 Analytics & Engagement Tracking](#analytics--engagement-tracking)
+- [👥 Team](#team)
+- [🚀 Project Submission](#project-submission)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+<div id="objective"></div>
+## 🎯 Objective
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> To solve content fatigue by offering a recommendation-driven, clean, and infinite scroll experience tailored to individual interests — all in one beautiful UI.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div id="key-features"></div>
+## ✨ Key Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ♾️ **Infinite Feed** – Seamlessly loads more posts as you scroll.
+- 🔍 **Smart Recommendations** – Posts based on selected interests (coming in final version).
+- 🧠 **Category Tabs** – Filter content across: `Photos`.
+- ❤️ **User Interaction** – Like, Save, Skip, and View Later functionality.
+- 📱 **Onboarding & Preferences** – Personalized category selection during login.
+- 🌗 **Theme Toggle** – Switch between **Light** and **Dark** mode.
+- 📶 **Responsive Design** – Optimized for both desktop and mobile.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+<div id="screenshots"></div>
+## 🖼️ Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Explore_Light.png" width="200" alt="Explore - Light Mode"><br><b>Explore – Light Mode</b></td>
+    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Explore_Dark.png" width="200" alt="Explore - Dark Mode"><br><b>Explore – Dark Mode</b></td>
+    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Post_Expanded.png" width="200" alt="Post Detail View"><br><b>Post Detail View</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Recommended.png" width="200" alt="Recommended Feed"><br><b>Recommended Feed</b></td>
+    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_SportsFeed.png" width="200" alt="Category Scroll - Sports"><br><b>Category Scroll – Sports</b></td>
+    <td><img src="https://user-images.githubusercontent.com/your-id/Screenshot_Explore_Tab_Navigation.png" width="200" alt="Bottom Navigation"><br><b>Bottom Navigation</b></td>
+  </tr>
+</table>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div id="tech-stack"></div>
+## 🧠 Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Layer          | Technologies              |
+|----------------|---------------------------|
+| Frontend       | React.js, Tailwind CSS    |
+| Backend        | Node.js, Express.js       |
+| Database       | Firebase Firestore        |
+| Auth           | Firebase Google Sign-In   |
+| Deployment     | Vercel (Frontend), Render (Backend) |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<div id="how-to-run-locally"></div>
+## 🛠️ How to Run Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Install Dependencies
+```bash
+npm install
