@@ -78,3 +78,120 @@
 ### 1. Install Dependencies
 ```bash
 npm install
+
+## 🛠️ How to Run Locally
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Configure Firebase
+
+Add your Firebase config to a `.env` file:
+
+```env
+VITE_API_KEY=your_api_key
+VITE_AUTH_DOMAIN=your_auth_domain
+VITE_PROJECT_ID=your_project_id
+VITE_STORAGE_BUCKET=your_storage_bucket
+VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_APP_ID=your_app_id
+```
+
+### 3. Start the App
+```bash
+npm run dev
+```
+
+---
+<div id= "folder-structure"></div>
+## 📂 Folder Structure
+
+```bash
+infiScroll/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── hooks/
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+ 🖼️ Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <b>Login Page</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210118.png" width="250"/>
+    </td>
+    <td align="center">
+      <b>Explore Feed - Light Mode</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210137.png" width="250"/>
+    </td>
+    <td align="center">
+      <b>Explore Feed - Dark Mode</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210155.png" width="250"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Explore Tab View</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210212.png" width="250"/>
+    </td>
+    <td align="center">
+      <b>Recommended Sports Feed</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210240.png" width="250"/>
+    </td>
+    <td align="center">
+      <b>Category Filter Feed</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210254.png" width="250"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Single Post View</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210313.png" width="250"/>
+    </td>
+    <td align="center">
+      <b>Explore Bottom Nav</b><br/>
+      <img src="https://github.com/user/screenshots/raw/main/Screenshot%202025-08-01%20210339.png" width="250"/>
+    </td>
+  </tr>
+</table>
+
+---
+<div id= "challenges-faced"></div>
+ 🧪 Challenges Faced
+
+- Integrating Firebase Auth with persistent state  
+- Conditional theme rendering across components  
+- Designing mobile-first responsive cards  
+- Managing scroll-based content rendering  
+- Syncing "Liked" & "Saved" states with Firebase  
+
+---
+<div id= "team"></div>
+ 👥 Team
+
+| Name         | Role        |
+|--------------|-------------|
+| Suhani       | Team Leader |
+| Krisha       | Developer   |
+| Rida         | Developer   |
+| Shambhavi    | Developer   |
+| Aayush Bhaiya| Mentor      |
+
+---
+
+## 🚀 Project Submission
+
+> Built with ❤️ by **Team SD_009** for **IITI Summer of Code 2025**
