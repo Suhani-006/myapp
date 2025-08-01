@@ -1398,5 +1398,446 @@
       "category": "gaming",
       "description": "A guide for beginners.",
       "image_url": "https://images.pexels.com/photos/211122/pexels-photo-211122.jpeg"
-    }
-  ]
+    },
+     {
+  "id": 201,
+  "title": "The Future of Wearable Tech",
+  "category": "technology",
+  "description": "How smartwatches and fitness trackers are evolving.",
+  "image_url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop"
+},
+{
+  "id": 202,
+  "title": "Cloud Computing Trends in 2025",
+  "category": "technology",
+  "description": "What’s next for cloud infrastructure and services.",
+  "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=200&fit=crop"
+},
+{
+  "id": 203,
+  "title": "Augmented Reality in Retail",
+  "category": "technology",
+  "description": "How AR is changing the way we shop.",
+  "image_url": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=300&h=200&fit=crop"
+},
+{
+  "id": 204,
+  "title": "The Rise of Smart Homes",
+  "category": "technology",
+  "description": "From voice assistants to connected appliances.",
+  "image_url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=300&h=200&fit=crop"
+},
+{
+  "id": 205,
+  "title": "Electric Vehicles: The Road Ahead",
+  "category": "technology",
+  "description": "How EVs are transforming transportation.",
+  "image_url": "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=300&h=200&fit=crop"
+},
+{
+  "id": 206,
+  "title": "Biometrics and Security",
+  "category": "technology",
+  "description": "Fingerprint, face, and voice recognition explained.",
+  "image_url": "https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?w=300&h=200&fit=crop"
+},
+{
+  "id": 207,
+  "title": "The Growth of 3D Printing",
+  "category": "technology",
+  "description": "From prototyping to production in various industries.",
+  "image_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=200&fit=crop"
+},
+{
+  "id": 208,
+  "title": "Voice Technology in 2025",
+  "category": "technology",
+  "description": "How voice assistants are becoming more human.",
+  "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=200&fit=crop"
+},
+{
+  "id": 209,
+  "title": "The Impact of 5G on IoT",
+  "category": "technology",
+  "description": "Ultra-fast networks powering billions of devices.",
+  "image_url": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=300&h=200&fit=crop"
+},
+{
+  "id": 210,
+  "title": "Robotics in Everyday Life",
+  "category": "technology",
+  "description": "How robots are moving from factories to homes.",
+  "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=200&fit=crop"
+},
+{
+  "id": 211,
+  "title": "The Promise of Self-Driving Cars",
+  "category": "technology",
+  "description": "Autonomous vehicles and the future of mobility.",
+  "image_url": "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=300&h=200&fit=crop"
+},
+{
+  "id": 212,
+  "title": "Green Tech Innovations",
+  "category": "technology",
+  "description": "Sustainable solutions for a cleaner planet.",
+  "image_url": "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?w=300&h=200&fit=crop"
+},
+{
+  "id": 213,
+  "title": "The Evolution of Mobile Payments",
+  "category": "technology",
+  "description": "How smartphones are replacing wallets.",
+  "image_url": "https://images.pexels.com/photos/210990/pexels-photo-210990.jpeg?w=300&h=200&fit=crop"
+},
+  {
+    "id": 214,
+    "title": "The Future of Quantum Computing",
+    "category": "technology",
+    "description": "How quantum computers will change everything.",
+    "image_url": "https://images.unsplash.com/photo-1667487935540-f59515f6c7fd?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cXVhbnR1bSUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
+  },
+  {
+    "id": 215,
+    "title": "Cybersecurity in the Age of AI",
+    "category": "technology",
+    "description": "Protecting data in a world of smart threats.",
+    "image_url": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 216,
+    "title": "The Role of AI in Healthcare",
+    "category": "technology",
+    "description": "How artificial intelligence is revolutionizing medicine.",
+    "image_url": "https://images.unsplash.com/photo-1666112835145-d79fc3f2e008?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cXVhbnR1bSUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
+  },
+  {
+    "id": 217,
+    "title": "Blockchain Beyond Cryptocurrency",
+    "category": "technology",
+    "description": "Applications of blockchain technology in various sectors.",
+    "image_url": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cXVhbnR1bSUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
+  },
+  {
+    "id": 218,
+    "title": "The Future of Space Exploration",
+    "category": "technology",
+    "description": "What’s next for humanity beyond Earth.",
+    "image_url": "https://plus.unsplash.com/premium_photo-1690297733164-958ea1f806ab?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cXVhbnR1bSUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
+  },
+  {
+    "id": 219,
+    "title": "Smart Cities: The Urban Future",
+    "category": "technology",
+    "description": "How technology is transforming urban living.",
+    "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 220,
+    "title": "The Impact of Social Media Algorithms",
+    "category": "technology",
+    "description": "How algorithms shape our online experiences.",
+    "image_url": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 221,
+    "title": "The Rise of Remote Work Technology",
+    "category": "technology",
+    "description": "Tools and trends in the remote work revolution.",
+    "image_url": "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 222,
+    "title": "The Future of Digital Privacy",
+    "category": "technology",
+    "description": "How to protect your data in a connected world.",
+    "image_url": "https://imageio.forbes.com/specials-images/imageserve/6479eebc4c13fe984413b283/0x0.jpg?fit=bounds&format=jpg&height=900&width=1600"
+  },
+  {
+    "id": 223,
+    "title": "Artificial Intelligence Ethics",
+    "category": "technology",
+    "description": "Navigating the moral implications of AI.",
+    "image_url": "https://imageio.forbes.com/specials-images/imageserve/6695479128cb8ad39db48076/Smart-city-technology-concept/960x0.jpg?format=jpg&width=960"
+  },
+  {
+    "id": 224,
+    "title": "The Future of Renewable Energy",
+    "category": "technology",
+    "description": "Innovations in solar, wind, and beyond.",
+    "image_url": "https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 225,
+    "title": "Neural Interfaces: The Next Step in Human-Tech Merge #15",
+    "category": "technology",
+    "description": "Exploring brain-computer interfaces and their future. (Post 15)",
+    "image_url": "https://thedailyplaniot.com/wp-content/uploads/2023/04/Smart-City.jpg"
+  },
+  {
+    "id": 226,
+    "title": "Edge Computing vs Cloud Computing #16",
+    "category": "technology",
+    "description": "Where should your data really be processed? (Post 16)",
+    "image_url": "https://images.prismic.io/vicwebsite2019/ZzcJbK8jQArT05s5_15-years-UAE-sanrt-city.jpg?auto=format%2Ccompress&w=1680"
+  },
+  {
+    "id": 227,
+    "title": "Augmented Reality in Everyday Life #17",
+    "category": "technology",
+    "description": "From furniture shopping to education—AR is here. (Post 17)",
+    "image_url": "https://cacm.acm.org/wp-content/uploads/2025/07/070825.News_.Quantum-Internet-S.jpg"
+  },
+  {
+    "id": 228,
+    "title": "Top AI Tools for Content Creators #18",
+    "category": "technology",
+    "description": "Speed up your creative workflow with these AI tools. (Post 18)",
+    "image_url": "https://www.researchgate.net/publication/384773798/figure/fig1/AS%3A11431281282797633%401728541727504/Overview-concept-of-the-Quantum-Internet-in-the-Sky.png"
+  },
+  {
+    "id": 229,
+    "title": "How Blockchain is Changing Industries #19",
+    "category": "technology",
+    "description": "Beyond crypto—real-world use cases of blockchain. (Post 19)",
+    "image_url": "https://cdn.hswstatic.com/gif/quantum-internet.jpg"
+  },
+  {
+    "id": 230,
+    "title": "The Science Behind Smart Assistants #20",
+    "category": "technology",
+    "description": "How Alexa and Siri understand your voice. (Post 20)",
+    "image_url": "https://www.slashgear.com/img/gallery/everything-you-need-to-know-about-quantum-internet/l-intro-1648668270.jpg"
+  },
+  {
+    "id": 231,
+    "title": "Cybersecurity in the Age of AI #21",
+    "category": "technology",
+    "description": "Is AI a threat or savior for digital safety? (Post 21)",
+    "image_url": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 232,
+    "title": "Top Programming Languages in 2025 #22",
+    "category": "technology",
+    "description": "What's trending among developers this year? (Post 22)",
+    "image_url": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 233,
+    "title": "Robotics in Healthcare #23",
+    "category": "technology",
+    "description": "How robots are assisting surgeries and elderly care. (Post 23)",
+    "image_url": "https://miro.medium.com/v2/resize%3Afit%3A1024/1%2AwplwHmMWHxU9E6R3OkuA8A.jpeg"
+  },
+  {
+    "id": 234,
+    "title": "The Dark Side of Big Tech #24",
+    "category": "technology",
+    "description": "Privacy, monopoly, and ethical concerns. (Post 24)",
+    "image_url": "https://easy-peasy.ai/cdn-cgi/image/quality%3D80%2Cformat%3Dauto%2Cwidth%3D700/https%3A//media.easy-peasy.ai/03e61ea0-281d-4683-99bf-c0c047bdab13/4c04d9cf-d439-4245-8389-7c23b9e08e14.png"
+  },
+  {
+    "id": 235,
+    "title": "Tech Behind Electric Vehicles #25",
+    "category": "technology",
+    "description": "What powers your EV? Batteries, motors, and software. (Post 25)",
+    "image_url": "https://easy-peasy.ai/cdn-cgi/image/quality%3D80%2Cformat%3Dauto%2Cwidth%3D700/https%3A//media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/ef1527f6-e9ad-47c3-a93b-e80d59b9c792.png"
+  },
+  {
+    "id": 236,
+    "title": "5G and the Internet of Things (IoT) #26",
+    "category": "technology",
+    "description": "What happens when everything is connected? (Post 26)",
+    "image_url": "https://static.wixstatic.com/media/cd3f7a_32d067a4fb5844548ae81b9f099ce544~mv2.webp/v1/fill/w_980%2Ch_560%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/cd3f7a_32d067a4fb5844548ae81b9f099ce544~mv2.webp"
+  },
+  {
+    "id": 237,
+    "title": "Tech for the Visually Impaired #27",
+    "category": "technology",
+    "description": "Innovations that make the world more accessible. (Post 27)",
+    "image_url": "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 238,
+    "title": "Quantum Internet: What Is It? #28",
+    "category": "technology",
+    "description": "Unhackable communication of the future. (Post 28)",
+    "image_url": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 239,
+    "title": "Power of Journaling #7",
+    "category": "lifestyle",
+    "description": "How a daily journal transforms your mindset. (Post 7)",
+    "image_url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 240,
+    "title": "Plant-Based Living #8",
+    "category": "lifestyle",
+    "description": "A mindful shift to healthier habits. (Post 8)",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9s5OHpXDfV1h2jfu9HF39sMfi3Ckuq-yw_g&s"
+  },
+  {
+    "id": 241,
+    "title": "The Power of Saying No #9",
+    "category": "lifestyle",
+    "description": "How boundaries boost mental clarity. (Post 9)",
+    "image_url": "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 242,
+    "title": "Creating a Vision Board #10",
+    "category": "lifestyle",
+    "description": "Visualize your goals and make them real. (Post 10)",
+    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 243,
+    "title": "Sunday Reset Rituals #11",
+    "category": "lifestyle",
+    "description": "Start your week feeling refreshed. (Post 11)",
+    "image_url": "https://i.pinimg.com/originals/11/65/34/116534f7a3d089b8a6254dc9aec8d8a2.jpg"
+  },
+  {
+    "id": 244,
+    "title": "Benefits of Nature Walks #12",
+    "category": "lifestyle",
+    "description": "Connect with nature to reduce stress. (Post 12)",
+    "image_url": "https://images.unsplash.com/photo-1508780709619-79562169bc64?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 245,
+    "title": "Evening Wind-Down Routine #13",
+    "category": "lifestyle",
+    "description": "How to end your day with intention. (Post 13)",
+    "image_url": "https://quotefancy.com/media/wallpaper/3840x2160/7696064-Clint-Walker-Quote-End-your-day-with-a-smile-a-happy-thought-and-a.jpg"
+  },
+  {
+    "id": 246,
+    "title": "How to Build a Capsule Wardrobe #14",
+    "category": "lifestyle",
+    "description": "Style simplified: fewer clothes, more confidence. (Post 14)",
+    "image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 247,
+    "title": "Intentional Living Explained #15",
+    "category": "lifestyle",
+    "description": "Design your life with clarity and purpose. (Post 15)",
+    "image_url": "https://media.licdn.com/dms/image/sync/v2/D5627AQHSLf9DBaNUEA/articleshare-shrink_800/articleshare-shrink_800/0/1712025762059?e=2147483647&v=beta&t=bQPy724G--S6ScTDIMdhFt5nViaaQNT-SWlY8AA9P1s"
+  },
+  {
+    "id": 248,
+    "title": "Gratitude Practices That Work #16",
+    "category": "lifestyle",
+    "description": "Daily habits to stay grounded and positive. (Post 16)",
+    "image_url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 249,
+    "title": "How to Create a Calm Space at Home #17",
+    "category": "lifestyle",
+    "description": "Simple decor shifts for mental clarity. (Post 17)",
+    "image_url": "https://images.unsplash.com/photo-1505691723518-36a0f673a027?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 250,
+    "title": "Work-Life Balance in the Digital Age #18",
+    "category": "lifestyle",
+    "description": "Mastering boundaries in a connected world. (Post 18)",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlICv-Vida2ose8Es40j_t0ZbMpBTooN6T4g&s"
+  },
+  {
+    "id": 251,
+    "title": "Inside the NBA Playoffs #6",
+    "category": "sports",
+    "description": "A breakdown of key moments and standout players. (Post 6)",
+    "image_url": "https://s.yimg.com/ny/api/res/1.2/WUPH6EzCdz5qEBZ_77LRVw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNztjZj13ZWJw/https%3A//s.yimg.com/os/creatr-uploaded-images/2025-04/bfae6b20-1e19-11f0-b77e-6f37ce438ce2"
+  },
+  {
+    "id": 252,
+    "title": "Marathon Legends #7",
+    "category": "sports",
+    "description": "Celebrating iconic long-distance runners. (Post 7)",
+    "image_url": "https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 253,
+    "title": "The Rise of Women's Sports #8",
+    "category": "sports",
+    "description": "How female athletes are reshaping the world of sports. (Post 8)",
+    "image_url": "https://snworksceo.imgix.net/asp/e3ba0171-66f7-49f2-be63-401e76436fa1.sized-1000x1000.jpg?w=800"
+  },
+  {
+    "id": 254,
+    "title": "Extreme Sports Moments #9",
+    "category": "sports",
+    "description": "Adrenaline-filled highlights from extreme sports. (Post 9)",
+    "image_url": "https://iso.500px.com/wp-content/uploads/2015/01/tristan_cover.jpg"
+  },
+  {
+    "id": 255,
+    "title": "The Evolution of Football Gear #10",
+    "category": "sports",
+    "description": "From leather helmets to modern tech. (Post 10)",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7SrqJPEJ-mAR7zR-UxVggV59prJlZ2RIe8VmRM6MknWCX_jlLOpmxtt_3wP8CRA359dxzXJRrXvvb5Ck6Mne_dJH14wc6gvZoGbvEbLkb9O0LNQMDINtVY4xk0WZ4hLjobjD6Mevg9gNl/s1600/EvolutionHelmet3.jpg"
+  },
+  {
+  "id": 256,
+  "title": "Top Tennis Matches of the Decade #11",
+  "category": "sports",
+  "description": "Unforgettable rallies, comebacks, and rivalries. (Post 11)",
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/2013_Australian_Open_-_Guillaume_Rufin.jpg/1200px-2013_Australian_Open_-_Guillaume_Rufin.jpg"
+},
+{
+  "id": 257,
+  "title": "World Cup Upsets #12",
+  "category": "sports",
+  "description": "Shocking underdog wins in world cup history. (Post 12)",
+  "image_url": "https://static0.thesportsterimages.com/wordpress/wp-content/uploads/wm/2024/11/10-biggest-underdog-victories-in-wwe-history-ranked-by-shock-factor.jpg"
+},
+{
+  "id": 258,
+  "title": "Inside an F1 Pit Stop #13",
+  "category": "sports",
+  "description": "The speed and precision behind Formula 1 races. (Post 13)",
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTl4OLb1wXufswLg9ip6D-3oeFTtwSVanf5Q&s"
+},
+{
+  "id": 259,
+  "title": "The Future of Sports Tech #14",
+  "category": "sports",
+  "description": "How technology is enhancing performance and safety. (Post 14)",
+  "image_url": "https://media.licdn.com/dms/image/v2/D4D12AQHH2pkeJhGRFA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721817047621?e=2147483647&v=beta&t=OlOI4aVSduCJheaxLAtaUnAHREAu-EGlIwOnCaHd8EY"
+},
+{
+  "id": 260,
+  "title": "Greatest Olympic Athletes #15",
+  "category": "sports",
+  "description": "Profiles of the most decorated Olympians. (Post 15)",
+  "image_url": "https://www.sportco.io/images/post/wu_1626844917.jpg"
+},
+{
+  "id": 261,
+  "title": "Training for the Ironman #16",
+  "category": "sports",
+  "description": "The grueling prep behind the world's toughest triathlon. (Post 16)",
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbdDJ8z_BHAlQiHofsDa34z4KW3XjVQ5LA_g&s"
+},
+{
+  "id": 262,
+  "title": "Underrated Sports You Should Watch #17",
+  "category": "sports",
+  "description": "Hidden gems of the sporting world. (Post 17)",
+  "image_url": "https://www.gersnet.co.uk/images/joomlart/news/detail/hb--bg.jpg"
+},
+{
+  "id": 263,
+  "title": "Behind the Scenes: Sports Photography #18",
+  "category": "sports",
+  "description": "Capturing motion, emotion, and impact. (Post 18)",
+  "image_url": "https://images.pexels.com/photos/3991882/pexels-photo-3991882.jpeg"
+}
+]
